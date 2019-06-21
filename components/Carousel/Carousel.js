@@ -1,26 +1,23 @@
 class Carousel {
-    constructor (buttons) {
-        this.buttons = buttons;
+    constructor (element) {
+        this.element = element;
         this.data = this.element.dataset.img;
         this.image = this.element.querySelectorAll(`.image[data-img=${this.data}`)
         this.next = this.element.querySelector('.right-button');
         this.previous = this.element.querySelector('.left-button');
 
-        // this.leftButton.addEventListener('click', () => this.leftClick())
-        // this.buttons.addEventListener('click', () => this.rightClick())
+        this.next.addEventListener('click', () => this.nextClick())
+        this.previous.addEventListener('click', () => this.prevClick())
         
     }
 
     nextClick() {
-        let counter = 0;
-        let amount = this.image.length;
-        let current = images[0];
-        this.buttons.classList('active');
-        
+        console.log('right button clicked');
+
     }
 
     prevClick(){
-        
+        console.log('left button clicked');
     }
 
 }
