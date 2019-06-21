@@ -29,7 +29,7 @@ class TabLink {
   selectTab(){
 
     // Select all elements with the .tab class on them
-    // const tabs = document.querySelectorAll();
+    const tabs = document.querySelectorAll();
     
     // Iterate through the NodeList removing the .active-tab class from each element
     // tabs.forEach()
@@ -55,7 +55,7 @@ class TabCard {
   }
   selectCard(){
     // Update the style of this.cardElement to display = "flex"
-    // this.cardElement;
+    this.cardElement.style.display = 'flex';
   }
 
 }
