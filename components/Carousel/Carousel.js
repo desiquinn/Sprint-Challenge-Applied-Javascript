@@ -3,6 +3,11 @@ class Carousel {
         this.element = element;
         this.data = this.element.dataset.img;
         this.image = this.element.querySelectorAll(`.image[data-img=${this.data}`)
+
+        this.counter = 0;
+        this.amount = this.image.length;
+        this.current = this.image[0];
+
         this.next = this.element.querySelector('.right-button');
         this.previous = this.element.querySelector('.left-button');
 
@@ -14,10 +19,12 @@ class Carousel {
     nextClick() {
         console.log('right button clicked');
 
+
     }
 
     prevClick(){
         console.log('left button clicked');
+    
     }
 
 }
